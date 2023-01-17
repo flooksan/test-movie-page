@@ -142,8 +142,12 @@
   border-radius: 10px;
   border: none;
   color: white;
+  /* background: #00337C; */
   /* background: #DDDDDD; */
-  background: linear-gradient(to right bottom, #7de5ed, #7bdeee, #7bd6ed, #7dceeb, #81c6e8);
+  /* background: linear-gradient(to right bottom, #7de5ed, #7bdeee, #7bd6ed, #7dceeb, #81c6e8); */
+  /* background-image: linear-gradient(to right bottom, #00337c, #00478c, #005b99, #006fa4, #1c82ad); */
+  /* background-image: linear-gradient(to right bottom, #00337c, #11589b, #357eb6, #5fa5ce, #8dcbe6); */
+  background-image: linear-gradient(to right bottom, #00337c, #004288, #005192, #00609c, #006fa4, #037fae, #188eb6, #2e9ebd, #45b3c7, #60c8cf, #7eddd7, #9df1df);
   transition: 0.5s;
 }
 
@@ -166,13 +170,17 @@
 
 @media only screen and (max-width: 600px) {
   body {
-    background-color: lightblue;
+    background-color: #F7F5EB;
   }
   .App {
     text-align: center;
     width: 100%;
     height: 100%;
     font-size: 16px;
+  }
+
+  .homepage .logo {
+    height: 150px;
   }
 
   .container1 {
@@ -186,6 +194,12 @@
     margin-right: 8px;
     font-size: 14px;
     
+  }
+
+  .container1 .btn:hover {
+    color: #434242;
+    /* background: linear-gradient(to right bottom, #7de5ed, #7bdeee, #7bd6ed, #7dceeb, #81c6e8);*/
+    background: #DDDDDD;
   }
 
   .container2 {

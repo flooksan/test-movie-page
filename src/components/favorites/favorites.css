@@ -36,7 +36,8 @@
   border: none;
   color: white;
   /* background: #DDDDDD; */
-  background: linear-gradient(to right bottom, #7de5ed, #7bdeee, #7bd6ed, #7dceeb, #81c6e8);
+  /* background: linear-gradient(to right bottom, #7de5ed, #7bdeee, #7bd6ed, #7dceeb, #81c6e8); */
+  
   transition: 0.5s;
 }
   
@@ -58,7 +59,7 @@
 
 @media only screen and (max-width: 600px) {
   body {
-    background-color: lightblue;
+    /* background-color: lightblue; */
   }
   .App {
     text-align: center;
@@ -66,6 +67,11 @@
     height: 100%;
     font-size: 16px;
   }
+
+  .favorites .logo {
+    height: 150px;
+  }
+
 
   .container1 {
     width: 100%;

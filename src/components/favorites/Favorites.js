@@ -67,7 +67,7 @@ function Favorites() {
   return (
     <div className='favorites'>
 
-      <img src={everyMovie} alt="every" height={250}/>
+      <img src={everyMovie} alt="every" height={250} className="logo"/>
 
       <div className='container1'>
           <Searchbar setInputMovie={setInputMovie} className="top"/>
