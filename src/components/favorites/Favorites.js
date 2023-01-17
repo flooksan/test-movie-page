@@ -74,7 +74,13 @@ function Favorites() {
           <Searchbar setInputMovie={setInputMovie} className="top"/>
           <div className='bottom'>
           <div className='dropdown'>
-                <button className='btn1' onClick={() => setIsOpen(!isOpen)}>Movie category</button>
+                <button 
+                    className='btn1' 
+                    onClick={() => {
+                      setIsOpen(!isOpen)
+                      setGenre(null)
+                      }}
+                >Movie category</button>
                 {isOpen && (
                   <div className="dropdown-content">
                       {genreId.map(genre => (
