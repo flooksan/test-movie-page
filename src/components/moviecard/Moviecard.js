@@ -6,7 +6,7 @@ import FavoritesContext from '../../store/favorites-context'
 
 
 function Moviecard({data}) {
-    
+    const {id, title, poster_path, release_date, } = data
     // Context 
     const favoritesCtx = useContext(FavoritesContext)
 
@@ -49,15 +49,15 @@ function Moviecard({data}) {
                 <AiFillHeart className='like' />
             }
             </div>
-                <a href={`https://www.themoviedb.org/movie/${data.id}`}>
-                    <img src={`https://image.tmdb.org/t/p/w500/${data.poster_path}`} alt={data.title} className='img'/>
+                <a href={`https://www.themoviedb.org/movie/${id}`}>
+                    <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={title} className='img'/>
                 </a>
 
             </div>
             {/* <p>Add to Favorite</p> */}
             <div className='title'>
-                <a className='movie-title' href={`https://www.themoviedb.org/movie/${data.id}`}>{data.title}</a>
-                <div className='movie-time'>{convertTime(data.release_date)}</div>
+                <a className='movie-title' href={`https://www.themoviedb.org/movie/${id}`}>{title}</a>
+                <div className='movie-time'>{convertTime(release_date)}</div>
             </div>
             
         </div>
@@ -65,3 +65,4 @@ function Moviecard({data}) {
 }
 
 export default Moviecard
+

@@ -34,14 +34,16 @@
   font-weight: 700;
   border-radius: 10px;
   border: none;
-  color: #434242;
-  background: #DDDDDD;
+  color: white;
+  /* background: #DDDDDD; */
+  background: linear-gradient(to right bottom, #7de5ed, #7bdeee, #7bd6ed, #7dceeb, #81c6e8);
   transition: 0.5s;
 }
   
 .container1 .btn:hover {
-  color: white;
-  background: linear-gradient(to right bottom, #7de5ed, #7bdeee, #7bd6ed, #7dceeb, #81c6e8);
+  color: #434242;
+  /* background: linear-gradient(to right bottom, #7de5ed, #7bdeee, #7bd6ed, #7dceeb, #81c6e8);*/
+  background: #DDDDDD;
 }
 
 
