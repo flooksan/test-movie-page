@@ -20,11 +20,11 @@ function Homepage() {
     const [genre, setGenre] = useState('')
     const [isLoading, setIsLoading] = useState(false)
     const [inputMovie, setInputMovie] = useState('')
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false)
     
     // Constant
-    const path = inputMovie ? 'search' : 'discover' ;
-    const URI = `${process.env.REACT_APP_BASE}/${path}/movie`;
+    const path = inputMovie ? 'search' : 'discover' 
+    const URI = `${process.env.REACT_APP_BASE}/${path}/movie`
     // const genreURI = `${process.env.REACT_APP_BASE}/genre/movie/list`
     
     
@@ -112,7 +112,7 @@ function Homepage() {
                 {isOpen && (
                   <div className="dropdown-content">
                       {genreId.map(genre => (
-                          <a style={{cursor: 'pointer'}}onClick={()=> setGenre(genre.id)}>{genre.name}</a>
+                          <a key={genre.id} style={{cursor: 'pointer'}}onClick={()=> setGenre(genre.id)}>{genre.name}</a>
                       ))}
                   </div>
                 )}
