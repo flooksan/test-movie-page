@@ -1,0 +1,98 @@
+a:visited { 
+  text-decoration: none; 
+  color: inherit;
+}
+a { 
+  text-decoration: none; 
+  color:black; 
+}
+
+.card {
+  width: 550px;
+  height: 550px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.top {
+  position: relative;
+  margin: 10px 5px;
+
+}
+
+.img {
+  width: 372px;
+  height: 480px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px grey;
+}
+
+.click-like {
+  top: 0px;
+  right: 0px;
+}
+
+.like {
+  position: relative;
+  color: #EB455F;
+  top: 56px;
+  right: -28%;
+  z-index: 9;
+  cursor: pointer;
+  height: 40px;
+  width: 200px;
+  transition: transform .3s; 
+}
+
+.like:hover {
+  transform: scale(1.2);
+}
+
+.movie-title {
+  cursor: pointer;
+  font-weight: bold;
+}
+.movie-title:hover {
+  color: #23b04e;
+}
+
+.movie-time {
+  color: rgba(0,0,0,0.6);
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+  }
+  
+  
+  .img {
+    width: 220px;
+    height: 330px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px lightgrey;
+  }
+
+  .click-like {
+    top: 0px;
+    right: 0px;
+  }
+  
+  .like {
+    position: relative;
+    color: #EB455F;
+    top: 40px;
+    right: -88px;
+    z-index: 9;
+    cursor: pointer;
+    height: 28px;
+    width: 190px;
+    transition: transform .3s; 
+  }
+  
+  .like:hover {
+    transform: scale(1.2);
+  }
+}

@@ -1,16 +1,17 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Homepage from './components/homepage/Homepage'
+import App from './App'
 import Favorites from './components/favorites/Favorites'
 
 
 function Routing() {
   return (
-    
+    <BrowserRouter>
         <Routes>
-            <Route path='/' element={<Homepage/>} />
+            <Route path='/' element={<App/>} />
             <Route path='/favorites' element={<Favorites/>} />
         </Routes>
-  
+    </BrowserRouter>
+    
   )
 }
 
