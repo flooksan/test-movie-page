@@ -76,7 +76,10 @@ function Homepage() {
     // Loading data
     if(isLoading) {
       return (
-        <p>Loading...</p>
+        <div className="lds-ring">
+          <div></div><div></div><div></div><div></div>
+          <p className='text'>Loading...</p>
+        </div>
       )
     }
 

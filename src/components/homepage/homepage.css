@@ -6,6 +6,75 @@
   font-size: 20px;
 }
 
+/* Rolling */
+.homepage {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+/* Loading */
+.lds-ring {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: px;
+}
+
+.lds-ring .text {
+  position: relative;
+  bottom: -40px;
+  font-size: 36px;
+  color:#7bd6ed;
+}
+
+.lds-ring div {
+  
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 10px solid #cef;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #cef transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .container1 {
   margin-top: 10px;
   width: 100%;
