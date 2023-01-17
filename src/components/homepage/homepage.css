@@ -115,6 +115,9 @@
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0081C9;
 }
 
 .dropdown-content a:hover {background-color: #f1f1f1}
@@ -138,14 +141,17 @@
   font-weight: 700;
   border-radius: 10px;
   border: none;
-  color: #434242;
-  background: #DDDDDD;
+  color: white;
+  /* background: #DDDDDD; */
+  background: linear-gradient(to right bottom, #7de5ed, #7bdeee, #7bd6ed, #7dceeb, #81c6e8);
   transition: 0.5s;
 }
 
 .container1 .btn1:hover, .btn2:hover {
-  color: white;
-  background: linear-gradient(to right bottom, #7de5ed, #7bdeee, #7bd6ed, #7dceeb, #81c6e8);
+  
+  color: #434242;
+  /* background: linear-gradient(to right bottom, #7de5ed, #7bdeee, #7bd6ed, #7dceeb, #81c6e8); */
+  background: #DDDDDD;
 }
   
   

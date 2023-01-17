@@ -57,7 +57,7 @@ function Homepage() {
       }
     }
 
-    console.log(genreId)
+    // console.log(genreId)
 
     
     // Fetch movies
@@ -91,7 +91,7 @@ function Homepage() {
     //   </ul>
     // )
  
-      console.log(genre,isOpen)
+      // console.log(genre,isOpen)
     // console.log(data.map(item => item.id))
   
     return (
