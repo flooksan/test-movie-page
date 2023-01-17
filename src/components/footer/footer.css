@@ -1,0 +1,10 @@
+.footer {
+    margin-top: 88px;
+    text-align: center;
+    color: #84D2C5;
+    transition: 0.4s;
+}
+
+.footer:hover {
+    color:  #ffb53d;
+}

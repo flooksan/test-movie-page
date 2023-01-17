@@ -8,3 +8,4 @@
 2. Go to https://www.themoviedb.org/settings/api
 3. API Key (v3 auth) it's you API if not create new
 
+## Thank You ##

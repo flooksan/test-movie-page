@@ -7,6 +7,7 @@ import Searchbar from '../searchbar/Searchbar'
 import Moviecard from '../moviecard/Moviecard'
 import everyMovie from  '../../images/every_trans.png'
 import fetchGenre from '../../genrefetch'
+import Footer from '../footer/Footer'
 
 function Favorites() {
   // Context
@@ -98,7 +99,7 @@ function Favorites() {
         ))}
 
       </div>
-
+      <Footer/>
     </div>
   )
 }
