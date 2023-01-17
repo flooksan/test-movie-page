@@ -7,6 +7,7 @@ import './homepage.css'
 import FavoriteContext from '../../store/favorites-context';
 import fetchGenre from '../../genrefetch';
 import everyMovie from  '../../images/every_trans.png'
+import Footer from '../footer/Footer'
 
 
 
@@ -143,7 +144,7 @@ function Homepage() {
         {/* <img src={`${images}${data.poster_path}`} alt={data.original_title} className={classes.img}/>
         <p>{data.original_title}</p>
         <p>{convertTime(data.release_date)}</p> */}
-      
+        <Footer/>
       </div>
     );
 }
