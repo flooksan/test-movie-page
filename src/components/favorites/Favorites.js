@@ -8,16 +8,29 @@ import Moviecard from '../moviecard/Moviecard'
 import everyMovie from  '../../images/every_trans.png'
 
 function Favorites() {
+  // Context
   const favoritesCtx = useContext(FavoritesContext)
-
+  
+  // State
   const [inputMovie, setInputMovie] = useState('')
-  const favoritesData = favoritesCtx.favorites
-  console.log(favoritesData)
+  
+  // Constant
+  let favoritesData = favoritesCtx.favorites
+
+  const newFevData = favoritesData.filter(movie => {
+    return movie.data.title.toLowerCase().includes(inputMovie.toLowerCase())
+  })
+
+  
+
+  favoritesData = !inputMovie ? favoritesData : newFevData
+ 
+  
 
   return (
     <div className='favorites'>
 
-      <img src={everyMovie} alt="every" height={200}/>
+      <img src={everyMovie} alt="every" height={250}/>
 
       <div className='container1'>
           <Searchbar setInputMovie={setInputMovie} className="top"/>

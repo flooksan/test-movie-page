@@ -7,7 +7,7 @@ function Searchbar(props) {
     return (
         <div className="searchbar">
             
-            <input type="text" placeholder='🔍 Search Movies !!' onChange={(event) => setInputMovie(event.target.value)}/>
+            <input type="text" placeholder='🔍 Search Movies....' onChange={(event) => setInputMovie(event.target.value)}/>
         </div>
     )
 }
