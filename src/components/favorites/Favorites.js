@@ -19,12 +19,16 @@ function Favorites() {
       <div className='container1'>
           <Searchbar setInputMovie={setInputMovie} className="top"/>
           <div className='bottom'>
-            <button className='btn'>Movie category</button>
+            <div className='dropdown'>
+                <button className='btn1'>Movie category</button>
+                
+            </div>
             <Link to="/" >
-              <button  className='btn'>
-                Homepage
-              </button>
+                  <button  className='btn2'>
+                    Homepage 
+                  </button>
             </Link>
+            
           </div>
       </div>
 
