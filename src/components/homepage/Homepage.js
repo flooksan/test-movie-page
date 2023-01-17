@@ -6,6 +6,7 @@ import Searchbar from '../searchbar/Searchbar.js'
 import './homepage.css'
 import FavoriteContext from '../../store/favorites-context';
 import fetchGenre from '../../genrefetch';
+import everyMovie from  '../../images/every_trans.png'
 
 
 
@@ -93,6 +94,7 @@ function Homepage() {
     return (
       <div className='homepage'>
         
+        <img src={everyMovie} alt="every" height={250}/>
         {/* <div className="searchbar">
               <input type="text" placeholder="Search Movies !!" onChange={(event) => setInputMovie(event.target.value)}/>
         </div> */}

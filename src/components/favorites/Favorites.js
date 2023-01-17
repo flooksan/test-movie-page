@@ -5,6 +5,7 @@ import FavoritesContext from '../../store/favorites-context'
 import { Link } from 'react-router-dom'
 import Searchbar from '../searchbar/Searchbar'
 import Moviecard from '../moviecard/Moviecard'
+import everyMovie from  '../../images/every_trans.png'
 
 function Favorites() {
   const favoritesCtx = useContext(FavoritesContext)
@@ -15,7 +16,9 @@ function Favorites() {
 
   return (
     <div className='favorites'>
-      
+
+      <img src={everyMovie} alt="every" height={200}/>
+
       <div className='container1'>
           <Searchbar setInputMovie={setInputMovie} className="top"/>
           <div className='bottom'>
