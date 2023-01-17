@@ -1,22 +1,31 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Moviecard from '../moviecard/Moviecard';
 import Searchbar from '../searchbar/Searchbar.js'
 import './homepage.css'
+import FavoriteContext from '../../store/favorites-context';
+import fetchGenre from '../../genrefetch';
 
 
-function App() {
-    
+
+function Homepage() {
+    // Context
+    const favoritesCtx = useContext(FavoriteContext)
 
     // All state
     const [data, setData] = useState([])
+    const [genreId, setGenreId] = useState([])
+    const [genre, setGenre] = useState('')
     const [isLoading, setIsLoading] = useState(false)
     const [inputMovie, setInputMovie] = useState('')
+    const [isOpen, setIsOpen] = useState(false);
     
     // Constant
     const path = inputMovie ? 'search' : 'discover' ;
     const URI = `${process.env.REACT_APP_BASE}/${path}/movie`;
+    // const genreURI = `${process.env.REACT_APP_BASE}/genre/movie/list`
+    
     
     
 
@@ -28,14 +37,18 @@ function App() {
         if(path !== 'search') {
           setIsLoading(true)
         }
+        
+        const genreResponse = await fetchGenre();
+        setGenreId(genreResponse);
 
-        const response = await axios.get(URI,{
+        const movieResponse = await axios.get(URI,{
           params: {
             api_key: `${process.env.REACT_APP_API}`,
-            query: inputMovie
+            query: inputMovie,
+            with_genres : genre ? genre : ''
           }
         })
-        setData(response.data.results)
+        setData(movieResponse.data.results)
         setIsLoading(false)
 
       } catch (error) {
@@ -43,13 +56,14 @@ function App() {
       }
     }
 
+    console.log(genreId)
 
     
     // Fetch movies
     useEffect(() => {
       fetchData()
       
-    },[inputMovie])
+    },[inputMovie, genre])
 
 
 
@@ -65,8 +79,15 @@ function App() {
       )
     }
 
+    // Dropdown menu 
+    // const Dropdown = () => (
+    //   <ul style={{display: 'list-item'}}>
+    //     <li style={{cursor:'pointer'}} onClick={()=>setGenre('test')}>test</li>
+    //     <li style={{cursor:'pointer'}} onClick={()=>setGenre('test2')}>test2</li>
+    //   </ul>
+    // )
  
-
+      console.log(genre,isOpen)
     // console.log(data.map(item => item.id))
   
     return (
@@ -78,14 +99,27 @@ function App() {
         
 
         <div className='container1'>
-          <Searchbar setInputMovie={setInputMovie} className="top"/>
-          <div className='bottom'>
-            <button className='btn'>Movie category</button>
-            <Link to="/favorites" >
-              <button  className='btn'>Favorite movies</button>
-            </Link>
-            
-          </div>
+            <Searchbar setInputMovie={setInputMovie} className="top"/>
+            <div className='bottom'>
+
+              <div className='dropdown'>
+                <button className='btn1' onClick={() => setIsOpen(!isOpen)}>Movie category</button>
+                {isOpen && (
+                  <div className="dropdown-content">
+                      {genreId.map(genre => (
+                          <a style={{cursor: 'pointer'}}onClick={()=> setGenre(genre.id)}>{genre.name}</a>
+                      ))}
+                  </div>
+                )}
+              </div>
+              
+              
+              <Link to="/favorites" >
+                <button  className='btn2'>Favorite movies</button>
+              </Link>
+              
+              
+            </div>
         </div>
 
         <div className='container2'>
@@ -109,7 +143,7 @@ function App() {
     );
 }
 
-export default App;
+export default Homepage;
 
 
  /* Movies data  คร่าวๆ
